@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Konfirmasi Hapus Tugas</title>
+</head>
+<body>
+    <h1>Konfirmasi Hapus Tugas</h1>
+    <p>Apakah Anda yakin ingin menghapus tugas "{{ task.title }}"?</p>
+    <form method="post" action="{% url 'app:task_delete' task.pk %}">
+        {% csrf_token %}
+        <a href="{% url 'app:task_delete' task.id %}" type="btn">Hapus</a>
+    </form>
+    <a href="{% url 'app:task' %}">Batal</a>
+</body>
+</html>
