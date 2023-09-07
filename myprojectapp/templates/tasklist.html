@@ -140,15 +140,15 @@
         </div>
     </div>
     {% for task in tasks %}
-            <div class="task-item">
-                <img class="logo" src="{{ task.image.url }}" alt="{{ task.title }}">
-                <h2 class="h2"><b>{{ task.title }}</b></h2>
-                <p>{{ task.description }}</p>
-                <div class="button-container">
-                    <button class="button2" onclick="editTask({{task.id}})">Edit</button>
-                    <button class="button2" onclick="showConfirmationdialog({{task.id}})"> Delete</button>
-                </div>
-            </div>   
+        <div class="task-item">
+            <img class="logo" src="{{ task.image.url }}" alt="{{ task.title }}">
+            <h2 class="h2"><b>{{ task.title }}</b></h2>
+            <p>{{ task.description }}</p>
+            <div class="button-container">
+                <button class="button2" onclick="editTask({{task.id}})">Edit</button>
+                <button class="button2" onclick="showConfirmationdialog({{task.id}})"> Delete</button>
+            </div>
+        </div>   
     {% endfor %}
     <button3 id="tambah-tugas-button">Tambah Tugas</button3>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

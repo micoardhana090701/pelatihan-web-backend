@@ -3,6 +3,9 @@ from django.http import HttpRequest, HttpResponse
 from myprojectapp.models import Task, Tool
 from django.core.files.uploadedfile import SimpleUploadedFile
 
+def home(request):
+    return render(request, 'home.html')
+
 def tambahtugas(request):
     if request.method == "POST":
         title = request.POST['title']
@@ -21,6 +24,10 @@ def makanan(request):
 def task(request):
     tasks = Task.objects.all()
     return render(request, 'tasklist.html', {'tasks': tasks})
+
+def home(request):
+    tasks = Task.objects.all()
+    return render(request, 'home.html', {'tasks': tasks})
 
 def task_update(request, pk):
     task = get_object_or_404(Task, pk=pk)
