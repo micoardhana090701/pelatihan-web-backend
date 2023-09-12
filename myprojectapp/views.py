@@ -29,6 +29,10 @@ def home(request):
     tasks = Task.objects.all()
     return render(request, 'home.html', {'tasks': tasks})
 
+def peralatan(request):
+    tool = Tool.objects.all()
+    return render(request, 'shop.html', {'tool': tool})
+
 def task_update(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':
@@ -50,7 +54,9 @@ def task_delete(request, pk):
 
 def tool(request):
     tool = Tool.objects.all()
-    return render(request, 'toollist.html', {'tool': tool})
+    return render(request, 'shop.html', {'tool': tool})
+
+
 
 def tambah_tool(request):
     if request.method == "POST":

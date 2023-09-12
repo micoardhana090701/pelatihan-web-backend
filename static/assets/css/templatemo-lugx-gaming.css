@@ -34,7 +34,7 @@ reset
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
+figure, header, nav, section, article, aside, footer, figcaption, input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -150,31 +150,12 @@ body {
   color: #0071f8;
 }
 
-.section-heading h6 {
-  color: #ee626b;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.main-button a {
-  display: inline-block;
-  background-color: #ee626b;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  height: 50px;
-  line-height: 50px;
-  padding: 0px 30px;
-  border-radius: 25px;
-  transition: all .3s;
-}
 
 .main-button a:hover {
   background-color: #0071f8;
   color: #fff;
 }
+
 
 /* 
 ---------------------------------------------
@@ -584,10 +565,7 @@ Header Style
     right: 70px;
   }
   .header-area.header-sticky .nav li a:hover,
-  .header-area.header-sticky .nav li a.active {
-    color: #ee626b!important;
-    opacity: 1;
-  }
+  
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
@@ -804,10 +782,6 @@ Services Style
   background-color: #0071f8;
   border-radius: 50%;
   transition: all .3s;
-}
-
-.features .item:hover .image {
-  background-color: #ee626b;
 }
 
 
@@ -1174,6 +1148,14 @@ Page Header Style
   margin-top: 20px;
   position: relative;
   margin-bottom: 20px;
+}
+.input-bunder{
+  border-radius: 20px; /* Atur radius sudut sesuai keinginan Anda */
+  padding: 10px;
+}
+.input-bunder input{
+  border-radius: 20px; /* Atur radius sudut sesuai keinginan Anda */
+  padding: 10px; /* Atur padding sesuai kebutuhan * /* Atur lebar sesuai kebutuhan */
 }
 
 
@@ -1667,6 +1649,7 @@ body {
     margin-top: 45px;
   }
 }
+
 
 @media (max-width: 1200px) {
   
